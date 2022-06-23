@@ -1,0 +1,17 @@
+---
+- name: Retrieving guacamole-auth-duo-{{ guacamole_version }}
+  get_url:
+    url: http://apache.org/dyn/closer.cgi?action=download&filename=guacamole/{{ guacamole_version }}/binary/guacamole-auth-duo-{{ guacamole_version }}.tar.gz
+    dest: /tmp/
+- name: Unarchiving guacamole-auth-duo-{{ guacamole_version }}
+  unarchive:
+    src: /tmp/guacamole-auth-duo-{{ guacamole_version }}.tar.gz
+    dest: /tmp/
+    copy: no
+- name: Install guacamole-auth-duo-{{ guacamole_version }}.jar
+  copy:
+    src: /tmp/guacamole-auth-duo-{{ guacamole_version }}/guacamole-auth-duo-{{ guacamole_version }}.jar
+    dest: /etc/guacamole/extensions/
+    remote_src: yes
+  become: true
+

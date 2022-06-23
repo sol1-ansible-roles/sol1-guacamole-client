@@ -1,0 +1,15 @@
+---
+guacamole_version: 1.4.0
+guacamole_server_source: "http://apache.org/dyn/closer.cgi?action=download&filename=guacamole/{{ guacamole_version }}/source/guacamole-server-{{ guacamole_version }}.tar.gz"
+guacamole_db_user: guacamole
+guacamole_db_password: 'foo'
+guacamole_db_name: guacamole_db
+guacamole_db_host: 127.0.0.1
+guacamole_db_port: 3306
+guacamole_is_proxied: false
+guacamole_proxy_address: "127.0.0.1"
+
+mysql_java_client_version: 5.1.44
+
+guacamole_apt_install:
+  - tomcat9

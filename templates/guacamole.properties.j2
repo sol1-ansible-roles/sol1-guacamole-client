@@ -1,0 +1,36 @@
+mysql-hostname: {{ guacamole_db_host }}
+mysql-port: {{ guacamole_db_port }}
+mysql-database: {{ guacamole_db_name }}
+mysql-username: {{ guacamole_db_user }}
+mysql-password: {{ guacamole_db_password }}
+
+{% if guacamole_user_mapping_file is defined %}
+user-mapping: {{ guacamole_user_mapping_file }}
+{% endif %}
+
+{% if duo_2fa_enable == true %}
+duo-api-hostname: {{ duo_api_hostname }}
+duo-integration-key: {{ duo_integration_key }}
+duo-secret-key: {{ duo_secret_key }}
+duo-application-key: {{ duo_application_key }}
+{% endif %}
+
+{% if totp_2fa_enable == true  %}
+totp-issuer: {{ totp_issuer }}
+totp-digits: {{ totp_digits }}
+totp-period: {{ totp_period }}
+totp-mode: {{ totp_mode }}
+{% endif %}
+
+{% if ldap_auth_enable == true %}
+skip-if-unavailable: ldap
+ldap-hostname: {{ ldap_hostname }}
+ldap-port: {{ ldap_port }}
+ldap-encryption-method: {{ ldap_encryption_method }}
+ldap-search-bind-dn: {{ ldap_search_bind_dn }}
+ldap-search-bind-password: {{ ldap_search_bind_password }}
+ldap-user-base-dn: {{ ldap_user_base_dn }}
+ldap-user-search-filter: {{ ldap_user_search_filter }}
+ldap-username-attribute: {{ ldap_username_attribute }}
+{% endif %}
+

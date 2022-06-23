@@ -1,0 +1,20 @@
+galaxy_info:
+  author: Dave Kempe (@davekempe)
+  description: Ansible role for installing Apache Guacamole Client on Debian 11
+  license: MIT
+  min_ansible_version: 2.4
+  platforms:
+    - name: Debian
+      versions:
+        - bullseye
+
+  galaxy_tags:
+    - guacamole
+    - tomcat
+    - rdp
+    - vnc
+    - telnet
+    - ssh
+    - mariadb
+
+dependencies: []

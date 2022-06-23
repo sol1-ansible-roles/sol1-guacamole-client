@@ -1,0 +1,19 @@
+---
+- name: Creating guacamole.properties file template
+  template:
+    src: guacamole.properties.j2
+    dest: /etc/guacamole/guacamole.properties
+  become: true
+
+- name: Copy over tomcat server.xml template
+  template:
+    src: tomcat-server.xml
+    dest: /etc/tomcat9/server.xml
+
+- name: Restarting tomcat
+  systemd:
+    name: tomcat9
+    state: restarted
+    enabled: true
+  become: true
+  changed_when: false
