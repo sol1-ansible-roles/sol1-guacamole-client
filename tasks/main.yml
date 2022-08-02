@@ -4,14 +4,14 @@
   package:
     name: "{{ guacamole_apt_install }}"
     state: present
-- import_tasks: install_guacamole_client.yml
-- import_tasks: install_guacamole_mysql_authentication.yml
-- import_tasks: duo_2fa_auth.yml
+- include_tasks: install_guacamole_client.yml
+- include_tasks: install_guacamole_mysql_authentication.yml
+- include_tasks: duo_2fa_auth.yml
   when: duo_2fa_enable is defined and duo_2fa_enable == true
-- import_tasks: saml_auth.yml
+- include_tasks: saml_auth.yml
   when: saml_auth_enable is defined and saml_auth_enable == true
-- import_tasks: ldap_auth.yml
+- include_tasks: ldap_auth.yml
   when: ldap_auth_enable is defined and ldap_auth_enable == true
-- import_tasks: totp_2fa_auth.yml
+- include_tasks: totp_2fa_auth.yml
   when: totp_2fa_enable is defined and totp_2fa_enable == true
-- import_tasks: configure_guacamole.yml
+- include_tasks: configure_guacamole.yml
