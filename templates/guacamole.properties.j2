@@ -22,6 +22,24 @@ totp-period: {{ totp_period }}
 totp-mode: {{ totp_mode }}
 {% endif %}
 
+{% if saml_auth_enable == true  %}
+saml-idp-metadata-url: {{ saml-idp-metadata-url }}
+saml-idp-url: {{ saml-idp-url }}
+saml-entity-id: {{ saml-entity-id }}
+saml-callback-url: {{ saml-callback-url }}
+saml-strict: {{ saml-strict }}
+saml-debug: {{ saml-debug }}
+saml-compress-request: {{ saml-compress-request }}
+saml-compress-response: {{ saml-compress-response }}
+saml-group-attribute: {{ saml-group-attribute }}
+
+{% if saml-extension-priority == true %}
+extension-priority: saml
+{% endif %}
+extension-priority: *, saml
+
+{% endif %}
+
 {% if ldap_auth_enable == true %}
 skip-if-unavailable: ldap
 ldap-hostname: {{ ldap_hostname }}
