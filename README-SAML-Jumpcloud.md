@@ -59,7 +59,7 @@ NOTE - this role moved the guacamole.war file to ROOT.war - forcing guacamole to
 `saml_idp_metadata_url` as above the location of the xml file downloaded from Jumpcloud
 `saml_idp_url` the value of IDP URL set above (you can't change this in jumpcloud once set)
 `saml_entity_id` the IDP entity ID above eg `https://gaucamole.example.com`
-`saml_callback_url` the ACS URL above eg `https://gaucamole.example.com/api/ext/saml/callback`
+`saml_callback_url` the ACS URL above eg `https://gaucamole.example.com/` without the "api/ext/saml/callback" which the gaucamole SAML addon adds to this URL
 `saml_strict` to to true to enforce proper SAML security - you really should! We also moved the WAR file to the root of the tomcat directory as per the main README note, to make this option work.
 `saml_debug` true of false didn't seem to actually do much :sadface:
 `saml_compress_request` true for jumpcloud
