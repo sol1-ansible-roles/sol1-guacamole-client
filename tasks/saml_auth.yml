@@ -10,7 +10,7 @@
     copy: no
 - name: Install guacamole-auth-sso-{{ guacamole_version }}.jar
   copy:
-    src: /tmp/guacamole-auth-sso-{{ guacamole_version }}/guacamole-auth-sso-saml-{{ guacamole_version }}.jar
+    src: /tmp/guacamole-auth-sso-{{ guacamole_version }}/saml/guacamole-auth-sso-saml-{{ guacamole_version }}.jar
     dest: /etc/guacamole/extensions/
     remote_src: yes
   become: true

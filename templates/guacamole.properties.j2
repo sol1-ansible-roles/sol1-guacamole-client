@@ -23,17 +23,17 @@ totp-mode: {{ totp_mode }}
 {% endif %}
 
 {% if saml_auth_enable == true  %}
-saml-idp-metadata-url: {{ saml-idp-metadata-url }}
-saml-idp-url: {{ saml-idp-url }}
-saml-entity-id: {{ saml-entity-id }}
-saml-callback-url: {{ saml-callback-url }}
-saml-strict: {{ saml-strict }}
-saml-debug: {{ saml-debug }}
-saml-compress-request: {{ saml-compress-request }}
-saml-compress-response: {{ saml-compress-response }}
-saml-group-attribute: {{ saml-group-attribute }}
+saml-idp-metadata-url: {{ saml_idp_metadata_url }}
+saml-idp-url: {{ saml_idp_url }}
+saml-entity-id: {{ saml_entity_id }}
+saml-callback-url: {{ saml_callback_url }}
+saml-strict: {{ saml_strict }}
+saml-debug: {{ saml_debug }}
+saml-compress-request: {{ saml_compress_request }}
+saml-compress-response: {{ saml_compress_response }}
+saml-group-attribute: {{ saml_group_attribute }}
 
-{% if saml-extension-priority == true %}
+{% if saml_extension_priority == true %}
 extension-priority: saml
 {% endif %}
 extension-priority: *, saml
