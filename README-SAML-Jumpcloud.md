@@ -23,8 +23,8 @@ NOTE - this role moved the guacamole.war file to ROOT.war - forcing guacamole to
    fit.
 
 1. Click the SSO Tab, and start filling out
-   form items.  Remember to replace `https://access.example.com` with the public URL
-   of your Knocknoc service.
+   form items.  Remember to replace `https://guacamole.example.com` with the public URL
+   of your Guacamole service.
 
    * IdP Entity ID: `https://gaucamole.example.com` is a good default, to make it unique for that Jumpcloud tenant.
    * SP Entity ID: `https://gaucamole.example.com`
