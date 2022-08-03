@@ -8,7 +8,7 @@
 
 - name: check if old-ROOT exists
   stat:
-    path: /var/lib/tomcat9/webbapps/old-ROOT
+    path: /var/lib/tomcat9/webapps/old-ROOT
   register: register_oldROOT
 
 - name: Moving the tomcat ROOT folder out the way
