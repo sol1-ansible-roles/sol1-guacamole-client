@@ -11,7 +11,7 @@ guacamole_proxy_address: "127.0.0.1"
 totp_2fa_enable: false
 duo_2fa_enable: false
 saml_auth_enable: false
-saml-extension-priority: false
+saml_extension_priority: false
 
 mysql_java_client_version: 5.1.44
 
