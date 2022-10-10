@@ -60,7 +60,7 @@ NOTE - this role moved the guacamole.war file to ROOT.war - forcing guacamole to
 
 `saml_idp_url` the value of IDP URL set above (you can't change this in jumpcloud once set)
 
-`saml_entity_id` the IDP entity ID above eg `https://gaucamole.example.com`
+`saml_entity_id` the IDP entity ID above eg `https://gaucamole.example.com/`
 
 `saml_callback_url` the ACS URL above eg `https://gaucamole.example.com/` without the "api/ext/saml/callback" which the gaucamole SAML addon adds to this URL
 
